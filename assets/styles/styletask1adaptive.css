@@ -1,0 +1,99 @@
+* {
+  border: 1px solid black;
+  text-align: center;
+}
+body {
+  margin: 0;
+  font-size: 2vw;
+}
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+}
+.article1 {
+  grid-area: article1;
+}
+.article2 {
+  grid-area: article2;
+}
+.article3 {
+  grid-area: article3;
+}
+.aside {
+  grid-area: aside;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1.5fr 1fr 1fr 1.5fr;
+    grid-template-areas:
+      "header header header"
+      "main main aside"
+      "article1 article2 aside"
+      "article3 article3 aside"
+      "footer footer footer";
+    justify-items: space-around;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    grid-area: footer;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-areas:
+      "header header header header"
+      "main main main main"
+      "article1 article1 article1 aside"
+      "article2 article2 article2 aside"
+      "article3 article3 article3 aside"
+      "footer footer footer footer";
+    justify-items: space-around;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    grid-area: footer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-areas:
+      "header header"
+      "main main"
+      "article1 article1"
+      "article2 article2"
+      "article3 article3"
+      "aside aside"
+      "footer footer"
+      "footer footer";
+    justify-items: space-around;
+  }
+  .footer {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    justify-content: space-between;
+    grid-area: footer;
+  }
+}
