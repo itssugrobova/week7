@@ -1,18 +1,204 @@
-header {
-  background-image: url(../images/photo1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 80vh;
-  padding-top: 3%;
-  padding-left: 10%;
-  padding-right: 10%;
-  display: grid;
-  grid-template-areas:
-    "logo header-nav"
-    "h1 contacts"
-    "excursions excursions";
-  grid-template-rows: 1fr 1.5fr 1fr;
+@media screen and (min-width: 1024px) {
+  header {
+    font-size: 1.2vw;
+    background-image: url(../images/photo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3% 10% 5% 10%;
+    display: grid;
+    grid-template-areas:
+      "logo header-nav"
+      "h1 contacts"
+      "excursions excursions";
+    grid-template-rows: 1fr 1.5fr 1fr;
+  }
+  h1 {
+    width: 50vw;
+  }
+  .contacts img {
+    width: 80%;
+  }
+  .excursions {
+    width: 16%;
+    height: 50px;
+  }
+  .excursiontypes {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 3%;
+    font-size: 1.3vw;
+  }
+  .excursiontypes img {
+    width: 40%;
+    height: 40%;
+    margin-right: 10px;
+  }
+  article {
+    width: 80%;
+  }
+  .excursiontypescontainer {
+    margin: 5%;
+  }
+  .aboutus {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    font-size: 1.3vw;
+  }
+  .photogallery {
+    margin: 5px;
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+      "gallery1 gallery1 gallery2 gallery3 gallery4"
+      "gallery1 gallery1 gallery2 gallery3 gallery4"
+      "gallery5 gallery6 gallery2 gallery7 gallery7"
+      "gallery5 gallery8 gallery2 gallery7 gallery7";
+  }
+  footer nav {
+    width: 60%;
+  }
+  footer nav a {
+    font-size: 1.3vw;
+  }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    font-size: 2vw;
+    background-image: url(../images/photo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3% 10% 5% 10%;
+    display: grid;
+    grid-template-areas:
+      "logo header-nav"
+      "h1 h1"
+      "contacts contacts"
+      "excursions excursions";
+  }
+  .contacts img {
+    width: 100%;
+  }
+  .excursions {
+    width: 26%;
+    height: 50px;
+  }
+  .excursiontypes {
+    font-size: 1.8vw;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 3%;
+  }
+  .excursiontypes img {
+    height: 40%;
+    margin-right: 10px;
+  }
+  h2 {
+    font-size: 3vw;
+  }
+  .excursiontypescontainer {
+    margin: 3%;
+  }
+  .aboutus {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    font-size: 1.8vw;
+  }
+  .photogallery {
+    margin: 5px;
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+      "gallery1 gallery1 gallery2"
+      "gallery1 gallery1 gallery2"
+      "gallery5 gallery6 gallery2"
+      "gallery5 gallery8 gallery2"
+      "gallery7 gallery7 gallery4";
+  }
+  .gallery3 {
+    display: none;
+  }
+  .footer nav a {
+    font-size: 1.2vw;
+  }
+  footer nav {
+    width: 70%;
+  }
+  .h2gallery {
+    margin-left: 3%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    font-size: 2vw;
+    background-image: url(../images/photo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3% 10% 5% 10%;
+    display: grid;
+    grid-template-areas:
+      "logo header-nav"
+      "h1 h1"
+      "contacts contacts"
+      "excursions excursions";
+  }
+  h1 {
+    width: 100%;
+  }
+  .contacts img {
+    width: 60%;
+  }
+  .excursions {
+    width: 36%;
+    height: 40px;
+  }
+  .excursiontypes {
+    font-size: 2vw;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3%;
+  }
+  .excursiontypes img {
+    height: 40%;
+    margin-right: 10px;
+  }
+  h2 {
+    font-size: 3vw;
+  }
+  .excursiontypescontainer {
+    margin: 5%;
+  }
+  .aboutus {
+    display: grid;
+    grid-template-rows: 1fr auto-fit;
+    font-size: 2vw;
+  }
+  .photogallery {
+    margin: 5px;
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+      "gallery1 gallery1 gallery2"
+      "gallery1 gallery1 gallery2"
+      "gallery5 gallery6 gallery2"
+      "gallery5 gallery8 gallery2"
+      "gallery7 gallery7 gallery4";
+  }
+  .gallery3 {
+    display: none;
+  }
+  footer nav a {
+    font-size: 2vw;
+  }
+  footer nav {
+    width: 70%;
+  }
+  .h2gallery {
+    margin-left: 5%;
+  }
+}
+
 nav a {
   text-decoration: none;
   color: white;
@@ -23,7 +209,6 @@ a:hover {
 }
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2vw;
 }
 .logo {
   grid-area: logo;
@@ -35,7 +220,6 @@ header nav {
 }
 h1 {
   grid-area: h1;
-  width: 50vw;
 }
 h1 img {
   width: 100%;
@@ -47,18 +231,11 @@ header .contacts {
   justify-content: center;
   grid-area: contacts;
 }
-.contacts img {
-  width: 80%;
-}
-.excursiontypescontainer {
-  margin: 5%;
-}
+
 .excursions {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 16%;
-  height: 50px;
   grid-area: excursions;
   text-decoration: none;
   color: white;
@@ -66,27 +243,10 @@ header .contacts {
   border-radius: 60px;
 }
 
-.excursiontypes {
-  display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
-  gap: 3%;
-}
 .excursiontypes div {
   display: flex;
 }
-.excursiontypes img {
-  width: 40%;
-  height: 40%;
-  margin-right: 10px;
-}
 
-article {
-  width: 80%;
-}
-.aboutus {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-}
 .mountainlake {
   width: 100%;
   height: 100%;
@@ -121,16 +281,7 @@ article {
 .gallery8 {
   grid-area: gallery8;
 }
-.photogallery {
-  margin: 5px;
-  display: grid;
-  gap: 5px;
-  grid-template-areas:
-    "gallery1 gallery1 gallery2 gallery3 gallery4"
-    "gallery1 gallery1 gallery2 gallery3 gallery4"
-    "gallery5 gallery6 gallery2 gallery7 gallery7"
-    "gallery5 gallery8 gallery2 gallery7 gallery7";
-}
+
 .gallery {
   margin-top: 5%;
 }
@@ -151,7 +302,6 @@ footer {
   justify-content: space-between;
 }
 footer nav {
-  width: 40%;
   display: flex;
   justify-content: space-between;
 }
